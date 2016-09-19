@@ -1,0 +1,14 @@
+--- grub-core/net/bootp.c~	2016-09-18 19:49:27.000000000 +0200
++++ grub-core/net/bootp.c	2016-09-18 19:51:29.000000000 +0200
+@@ -52,9 +52,9 @@
+ }
+ 
+ static void
+-parse_dhcp_vendor (const char *name, void *vend, int limit, int *mask)
++parse_dhcp_vendor (const char *name, const void *vend, int limit, int *mask)
+ {
+-  grub_uint8_t *ptr, *ptr0;
++  const grub_uint8_t *ptr, *ptr0;
+ 
+   ptr = ptr0 = vend;
+ 
